@@ -1,17 +1,17 @@
 // ===== MOCK DATA =====
 const products = [
-    { id: 1, name: 'Sauvage Elixir', brand: 'Dior', price: 589, originalPrice: 799, volume: '100ml', badge: 'Outlet', trending: true },
-    { id: 2, name: 'Coco Mademoiselle', brand: 'Chanel', price: 649, originalPrice: 899, volume: '50ml', badge: 'Best Seller', trending: true },
-    { id: 3, name: 'Acqua di Giò', brand: 'Armani', price: 129, originalPrice: 549, volume: '100ml', badge: 'Outlet', trending: false },
-    { id: 4, name: 'Eros Pour Femme', brand: 'Versace', price: 129, originalPrice: 599, volume: '100ml', badge: null, trending: true },
-    { id: 5, name: "J'adore Infinissime", brand: 'Dior', price: 699, originalPrice: 949, volume: '50ml', badge: 'Novo', trending: false },
-    { id: 6, name: 'Bleu de Chanel', brand: 'Chanel', price: 129, originalPrice: 749, volume: '100ml', badge: 'Outlet', trending: false },
-    { id: 7, name: 'Si Passione', brand: 'Armani', price: 129, originalPrice: 629, volume: '50ml', badge: null, trending: true },
-    { id: 8, name: 'Dylan Blue', brand: 'Versace', price: 129, originalPrice: 529, volume: '100ml', badge: 'Outlet', trending: false },
-    { id: 9, name: 'Miss Dior', brand: 'Dior', price: 619, originalPrice: 829, volume: '100ml', badge: null, trending: false },
-    { id: 10, name: 'Chance Eau Tendre', brand: 'Chanel', price: 589, originalPrice: 799, volume: '50ml', badge: 'Best Seller', trending: true },
-    { id: 11, name: 'Code Absolu', brand: 'Armani', price: 469, originalPrice: 649, volume: '100ml', badge: null, trending: false },
-    { id: 12, name: 'Crystal Noir', brand: 'Versace', price: 129, originalPrice: 559, volume: '90ml', badge: 'Outlet', trending: false }
+    { id: 1, name: 'Sauvage Elixir', brand: 'Dior', price: 129, 64, 38, 29, originalPrice: 799, volume: '100ml, 50ml, 30ml, 10ml', badge: 'Outlet', trending: true },
+    { id: 2, name: 'Coco Mademoiselle', brand: 'Chanel', price: 129, 64, 38, 29, originalPrice: 899, volume: '100ml, 50ml, 30ml, 10ml', badge: 'Best Seller', trending: true },
+    { id: 3, name: 'Acqua di Giò', brand: 'Armani', price: 129, 64, 38, 29, originalPrice: 549, volume: '100ml, 50ml, 30ml, 10ml', badge: 'Outlet', trending: false },
+    { id: 4, name: 'Eros Pour Femme', brand: 'Versace', price: 129, 64, 38, 29, originalPrice: 599, volume: '100ml, 50ml, 30ml, 10ml', badge: null, trending: true },
+    { id: 5, name: "J'adore Infinissime", brand: 'Dior', price: 129, 64, 38, 29, originalPrice: 949, volume: '100ml, 50ml, 30ml, 10ml', badge: 'Novo', trending: false },
+    { id: 6, name: 'Bleu de Chanel', brand: 'Chanel', price: 129, 64, 38, 29, originalPrice: 749, volume: '100ml, 50ml, 30ml, 10ml', badge: 'Outlet', trending: false },
+    { id: 7, name: 'Si Passione', brand: 'Armani', price: 129, 64, 38, 29, originalPrice: 629, volume: '100ml, 50ml, 30ml, 10ml', badge: null, trending: true },
+    { id: 8, name: 'Dylan Blue', brand: 'Versace', price: 129, 64, 38, 29, originalPrice: 529, volume: '100ml, 50ml, 30ml, 10ml', badge: 'Outlet', trending: false },
+    { id: 9, name: 'Miss Dior', brand: 'Dior', price: 129, 64, 38, 29, originalPrice: 829, volume: '100ml, 50ml, 30ml, 10ml', badge: null, trending: false },
+    { id: 10, name: 'Chance Eau Tendre', brand: 'Chanel', price: 129, 64, 38, 29, originalPrice: 799, volume: '100ml, 50ml, 30ml, 10ml', badge: 'Best Seller', trending: true },
+    { id: 11, name: 'Code Absolu', brand: 'Armani', price: 129, 64, 38, 29, originalPrice: 649, volume: '100ml, 50ml, 30ml, 10ml', badge: null, trending: false },
+    { id: 12, name: 'Crystal Noir', brand: 'Versace', price: 129, 64, 38, 29, originalPrice: 559, volume: '100ml, 50ml, 30ml, 10ml', badge: 'Outlet', trending: false }
 ];
 
 let cart = JSON.parse(localStorage.getItem('lartparfum_cart')) || [];
@@ -327,7 +327,6 @@ function initializeForms() {
         });
     });
 }
-
 // ===== MAKE FUNCTIONS GLOBAL =====
 window.updateQuantity = updateQuantity;
 window.removeFromCart = removeFromCart;
