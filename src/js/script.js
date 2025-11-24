@@ -1,6 +1,6 @@
 // ===== MOCK DATA =====
 const products = [
-    { id: 1, name: 'Sauvage Elixir', brand: 'Dior', price: 129, originalPrice: 799, volume: '100ml, badge: 'Outlet', trending: true },
+    { id: 1, name: 'Sauvage Elixir', brand: 'Dior', price: 129, originalPrice: 799, volume: '100ml', badge: 'Outlet', trending: true },
     { id: 2, name: 'Coco Mademoiselle', brand: 'Chanel', price: 129, originalPrice: 899, volume: '100ml',  badge: 'Best Seller', trending: true },
     { id: 3, name: 'Acqua di Giò', brand: 'Armani', price: 129, originalPrice: 549, volume: '100ml', badge: 'Outlet', trending: false },
     { id: 4, name: 'Eros Pour Femme', brand: 'Versace', price: 129, originalPrice: 599, volume: '100ml', badge: null, trending: true },
@@ -330,4 +330,5 @@ function initializeForms() {
 // ===== MAKE FUNCTIONS GLOBAL =====
 window.updateQuantity = updateQuantity;
 window.removeFromCart = removeFromCart;
+
 
