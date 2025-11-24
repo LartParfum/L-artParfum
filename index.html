@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Art Parfum - Perfumes de Luxo</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Seu CSS -->
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo-link">
+                <div class="logo-text">L'ART PARFUM</div>
+            </a>
+
+            <button class="btn-mobile" aria-label="Abrir menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trending">Em Alta</a></li>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="#products">Novidades</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <button class="btn-icon cart-btn" aria-label="Carrinho">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge">0</span>
+                </button>
+                <a href="tel:+5535999300120" class="btn btn-default">
+                    <i class="fas fa-phone-alt"></i>
+                    (35) 9 9930-0120
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Coleção Premium 2025</span>
+            <h1 class="hero-title">A Arte da Perfumaria</h1>
+            <p class="hero-description">Descubra fragrâncias exclusivas que contam sua história</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">
+                    <i class="fas fa-arrow-right"></i>
+                    Explorar Coleção
+                </a>
+                <a href="#about" class="btn btn-outline">
+                    Saiba Mais
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Role para descobrir</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- TRENDING SECTION -->
+    <section id="trending" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Mais Vendidos</span>
+                <h2 class="section-title">Em Alta Agora</h2>
+                <p class="section-description">Os perfumes favoritos dos nossos clientes</p>
+            </div>
+
+            <div class="trending-grid" id="trendingGrid">
+                <!-- Produtos em alta serão inseridos aqui via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section bg-light">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-subtitle">Nossa História</span>
+                    <h2 class="section-title">Excelência em Perfumaria</h2>
+                    <p class="about-text">
+                        A L'Art Parfum traz ao Brasil as mais exclusivas fragrâncias importadas. 
+                        Nossa paixão é transformar cada momento em uma experiência sensorial única.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% Produtos Originais</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Entrega Rápida e Segura</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Garantia de Qualidade</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Atendimento Especializado</span>
+                        </div>
+                    </div>
+                    <a href="#products" class="btn btn-primary">Ver Produtos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Novidades</span>
+                <h2 class="section-title">Nossa Coleção</h2>
+                <p class="section-description">Explore nossa seleção exclusiva de perfumes importados</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Ordenar:</label>
+                    <select id="sortFilter" class="filter-select">
+                        <option value="featured">Destaques</option>
+                        <option value="name">Nome A-Z</option>
+                        <option value="price-asc">Menor Preço</option>
+                        <option value="price-desc">Maior Preço</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Marca:</label>
+                    <select id="brandFilter" class="filter-select">
+                        <option value="all">Todas</option>
+                        <option value="dior">Dior</option>
+                        <option value="chanel">Chanel</option>
+                        <option value="armani">Armani</option>
+                        <option value="versace">Versace</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Preço:</label>
+                    <select id="priceFilter" class="filter-select">
+                        <option value="all">Todos</option>
+                        <option value="0-300">Até R$ 119,99</option>
+                        <option value="200-500">R$ 129,99 - R$ 139,99</option>
+                        <option value="500+">Acima de R$ 500</option>
+                    </select>
+                </div>
+                <button class="btn btn-reset" id="resetFilters">
+                    <i class="fas fa-redo"></i>
+                    Limpar
+                </button>
+            </div>
+
+            <!-- Grid de Produtos -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Produtos serão inseridos aqui via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Fale Conosco</span>
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-description">Estamos aqui para te ajudar a encontrar o perfume perfeito</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Telefone</h3>
+                        <p>(35) 9 9930-0120</p>
+                        <a href="tel:+5535999300120" class="contact-link">Ligar Agora</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>E-mail</h3>
+                        <p>contato@lartparfum.com.br</p>
+                        <a href="mailto:contato@lartparfum.com.br" class="contact-link">Enviar E-mail</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p>(35) 9 9930-0120</p>
+                        <a href="https://wa.me/5535999300120" target="_blank" class="contact-link">Abrir WhatsApp</a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Seu E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Seu Telefone">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">L'ART PARFUM</h3>
+                    <p class="footer-text">Perfumes importados de alta qualidade com preços acessíveis.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#trending">Em Alta</a></li>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#products">Produtos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Atendimento</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Política de Troca</a></li>
+                        <li><a href="#">Envio e Entrega</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Receba ofertas exclusivas</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 L'Art Parfum. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART SIDEBAR -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Meu Carrinho</h3>
+            <button class="cart-close" aria-label="Fechar carrinho">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-body" id="cartBody">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Seu carrinho está vazio</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="cartTotal">R$ 0,00</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkoutBtn">
+                <i class="fas fa-lock"></i>
+                Finalizar Compra
+            </button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- JavaScript -->
+    <script src="src/js/script.js"></script>
+</body>
+</html>
